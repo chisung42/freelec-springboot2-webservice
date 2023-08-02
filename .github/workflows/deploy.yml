@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest # (3)
 
     steps:
+      - name: Get Current Time
+        uses: josStorer/get-current-time@v2.1.1
       - name: Checkout
         uses: actions/checkout@v2 # (4)
       - name: configure aws credentials

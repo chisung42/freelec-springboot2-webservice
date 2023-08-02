@@ -50,8 +50,8 @@ jobs:
         with:
           aws_access_key: ${{ env.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ env.AWS_SECRET_ACCESS_KEY }}
-          application_name: asc6
-          environment_name: Asc6-env
+          application_name: asc7
+          environment_name: Asc7-env
           version_label: github-action-${{steps.current-time.outputs.formattedTime}}
           region: ap-northeast-2
           deployment_package: deploy/deploy.zip

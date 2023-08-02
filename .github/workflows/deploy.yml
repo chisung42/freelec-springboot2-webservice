@@ -35,3 +35,12 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean build # (7)
         shell: bash
+        
+      - name: Beanstalk Deploy
+        uses: einaregilsson/beanstalk-deploy@v21
+        aws_access_key: ${{ env.AWS_ACCESS_KEY_ID }}
+        aws_secret_key: ${{ env.AWS_SECRET_ACCESS_KEY }}
+        application_name: asc6
+        environment_name: asc6
+        
+        region: ap-northeast-2
